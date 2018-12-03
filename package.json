@@ -1,0 +1,64 @@
+{
+  "name": "atlas-latest-experiments-cards",
+  "version": "1.2.0",
+  "description": "A package that renders grids of cards.",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepack": "rm -rf lib && babel src -d lib --copy-files",
+    "testOnly": "jest --env=jsdom --coverage --verbose",
+    "test": "npm run testOnly",
+    "posttest": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "postversion": "npm publish",
+    "postpublish": "git push && git push --tags"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "setupFiles": [
+      "<rootDir>/__mocks__/requestAnimationFrame.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "__test__/TestUtils.js"
+    ]
+  },
+  "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
+  "collaborators": [
+    "Monica Jianu <monica@ebi.ac.uk>"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ebi-gene-expression-group/atlas-homepage-cards"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.6.1",
+    "react-ebi-species": "^2.0.0",
+    "styled-components": "^4.1.1",
+    "urijs": "^1.19.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "coveralls": "^3.0.2",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint": "^5.9.0",
+    "eslint-config-gene-expression": "^0.4.2",
+    "fetch-mock": "^7.2.5",
+    "jest": "^23.6.0",
+    "react-dom": "^16.6.1",
+    "react-test-renderer": "^16.6.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
