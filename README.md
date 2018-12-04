@@ -1,7 +1,7 @@
 # Single Cell Latest Experiment Cards
 
 ## About the component
-This repository contains a tab-type React component that renders layers of cards with tooltips and links.
+This repository contains a tab shape React component that renders layers of cards with tooltips and links.
 
 ## Getting started
 ### Installing dependencies
