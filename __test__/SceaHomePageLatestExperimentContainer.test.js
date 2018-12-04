@@ -15,11 +15,11 @@ describe(`SceaHomePageLatestExperimentContainer`, () => {
     cards: latestExperimentCardsProps
   }
 
-  test(`renders species cards using Foundation’s block grid`, async () => {
+  test(`renders latest experiment cards`, async () => {
     const wrapper = mount(<SceaHomePageLatestExperimentContainer {...props} />)
 
     expect(wrapper.find(LatestExperimentCard)).toHaveLength(props.cards.length)
-    expect(wrapper.find(`.tabs-content`).exists()).toBe(true)
+    expect(wrapper.find(`.tabs-panel.is-active`).exists()).toBe(true)
     expect(wrapper.find(`.media-object.stack-for-small`)).toHaveLength(props.cards.length)
   })
 })
