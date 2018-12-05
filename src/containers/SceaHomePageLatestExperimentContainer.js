@@ -5,7 +5,7 @@ import latestExperimentCardPropTypes from '../cards/latestExperimentCardPropType
 import LatestExperimentCard from '../cards/LatestExperimentCard'
 
 const SceaHomePageLatestExperimentContainer = ({cards, host}) =>
-  <div id="latest-experiments" className="tabs-panel is-active" role="tabpanel" aria-labelledby="latest-experiments-label">
+  <div id={`latest-experiments`} className={`tabs-panel is-active`} role={`tabpanel`} aria-labelledby={`latest-experiments-label`}>
     <ul className="clear">
     {
       Array.isArray(cards) &&
@@ -17,7 +17,8 @@ const SceaHomePageLatestExperimentContainer = ({cards, host}) =>
   </div>
 
 SceaHomePageLatestExperimentContainer.propTypes = {
-  cards: PropTypes.arrayOf(PropTypes.shape(latestExperimentCardPropTypes)).isReq
+  cards: PropTypes.arrayOf(PropTypes.shape(latestExperimentCardPropTypes)).isRequired,
+  host: PropTypes.string
 }
 
 export default SceaHomePageLatestExperimentContainer

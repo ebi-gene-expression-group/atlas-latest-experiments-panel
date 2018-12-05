@@ -1,11 +1,17 @@
 import PropTypes from 'prop-types'
 
 const latestExperimentCardPropTypes = {
-  numberOfAssays: PropTypes.number,
+  experimentType: PropTypes.string,
   experimentAccession: PropTypes.string,
-  lastUpdate: PropTypes.string,
   experimentDescription: PropTypes.string,
-  species: PropTypes.string
+  lastUpdate: PropTypes.string,
+  numberOfAssays: PropTypes.number,
+  numberOfContrasts: PropTypes.number,
+  species: PropTypes.string,
+  kingdom: PropTypes.string,
+  experimentalFactors: PropTypes.arrayOf(PropTypes.string),
+  arrayDesigns: PropTypes.array,
+  arrayDesignNames: PropTypes.array
 }
 
 export default latestExperimentCardPropTypes
