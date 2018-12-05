@@ -18,7 +18,7 @@ const SceaHomePageLatestExperimentContainer = ({cards, host}) =>
 
 SceaHomePageLatestExperimentContainer.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape(latestExperimentCardPropTypes)).isRequired,
-  host: PropTypes.string
+  host: PropTypes.string.isRequired
 }
 
 export default SceaHomePageLatestExperimentContainer
