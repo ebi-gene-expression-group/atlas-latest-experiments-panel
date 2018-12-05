@@ -6,9 +6,7 @@ const LatestExperimentCard = ({numberOfAssays, host, experimentAccession, lastUp
   <li>
     <div className={`media-object stack-for-small`}>
       <div className={`media-object-section middle hide-for-small-only`}>
-        <span className={`button secondary no-action fixed-width-medium has-tip`} data-tooltip={`fmjj2g-tooltip`} title={``} 
-          aria-describedby={`o0u550-tooltip`} data-yeti-box={`o0u550-tooltip`} data-toggle={`o0u550-tooltip`} 
-          data-resize={`o0u550-tooltip`} data-events={`resize`}>{numberOfAssays.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} assays</span>
+         <span className={`button secondary no-action fixed-width-medium`} data-tooltip title={`Number of assays in experiment`}>{numberOfAssays.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} assays</span>
       </div>
       <div className={`media-object-section middle hide-for-small-only`}>
         <a className={`button`} href={`${host}/experiments/${experimentAccession}`}>Results</a>
