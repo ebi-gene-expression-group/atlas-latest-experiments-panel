@@ -6,8 +6,8 @@ import Adapter from 'enzyme-adapter-react-16'
 import fetchMock from 'fetch-mock'
 
 import { getRandomInt } from './TestUtils'
-import CalloutAlert from '../src/containers/CalloutAlert'
-import withFetchLoader from '../src/containers/FetchLoader'
+import CalloutAlert from '../src/CalloutAlert'
+import withFetchLoader from '../src/FetchLoader'
 
 const getRandomHttpErrorCode = () => getRandomInt(400, 600)
 

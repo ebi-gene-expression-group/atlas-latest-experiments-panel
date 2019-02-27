@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import fetchMock from 'fetch-mock'
 
-import CalloutAlert from '../src/containers/CalloutAlert'
+import CalloutAlert from '../src/CalloutAlert'
 
 Enzyme.configure({ adapter: new Adapter() })
 
