@@ -5,19 +5,19 @@ import Adapter from 'enzyme-adapter-react-16'
 
 import { latestExperimentCardsProps } from './TestUtils'
 
-import LatestExperimentEntry from '../src/LatestExperimentEntry'
+import LatestExperimentPanel from '../src/LatestExperimentPanel'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-describe(`SceaHomePageLatestExperimentContainer`, () => {
+describe(`LatestExperimentPanel`, () => {
   const props = {
     cards: latestExperimentCardsProps
   }
 
   test(`renders latest experiment cards`, async () => {
-    const wrapper = mount(<LatestExperimentEntry {...props} />)
+    const wrapper = mount(<LatestExperimentPanel {...props} />)
 
-    expect(wrapper.find(`LatestExperimentPanel`)).toHaveLength(props.cards.length)
+    expect(wrapper.find(`LatestExperimentEntry`)).toHaveLength(props.cards.length)
     expect(wrapper.find(`small`)).toHaveLength(props.cards.length)
   })
 })

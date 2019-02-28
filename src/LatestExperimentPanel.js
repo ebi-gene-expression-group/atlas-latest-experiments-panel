@@ -10,7 +10,7 @@ const TableCellDiv = styled.div`
 }
 `
 
-const LatestExperimentPanel = ({numberOfAssays, host, experimentAccession, lastUpdate, experimentDescription, species}) =>
+const LatestExperimentEntry = ({numberOfAssays, host, experimentAccession, lastUpdate, experimentDescription, species}) =>
   <li>
     <div style={{display: 'block', marginBottom: '1rem'}}>
       <TableCellDiv className={'hide-for-small-only'}>
@@ -30,10 +30,10 @@ const LatestExperimentPanel = ({numberOfAssays, host, experimentAccession, lastU
     </div>
   </li>
 
-const LatestExperimentEntry = ({cards, host}) =>
+const LatestExperimentPanel = ({cards, host}) =>
   <div id={'latest-experiments'} style={{padding: '1rem'}}>
     <ul style={{listStyle: 'none', marginLeft: 'offset'}}>
-      { Array.isArray(cards) && cards.map((card, idx) => <LatestExperimentPanel key={idx} host={host} {...card}/>) }
+      { Array.isArray(cards) && cards.map((card, idx) => <LatestExperimentEntry key={idx} host={host} {...card}/>) }
     </ul>
   </div>
 
@@ -52,9 +52,9 @@ LatestExperimentPanel.propTypes = {
   arrayDesignNames: PropTypes.array
 }
 
-LatestExperimentEntry.propTypes = {
+LatestExperimentPanel.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape(LatestExperimentPanel.propTypes)).isRequired,
   host: PropTypes.string.isRequired
 }
 
-export default LatestExperimentEntry
+export default LatestExperimentPanel
