@@ -1,4 +1,4 @@
-# Expression Atlas Latest Experiments Panel [![Build Status](https://travis-ci.com/ebi-gene-expression-group/atlas-latest-experiments-panel.svg?branch=master)](https://travis-ci.com/ebi-gene-expression-group/atlas-latest-experiments-panel) [![Coverage Status](https://coveralls.io/repos/github/ebi-gene-expression-group/atlas-latest-experiments-panel/badge.svg?branch=feature%2Fredesign-latest-experiment-cards)](https://coveralls.io/github/ebi-gene-expression-group/atlas-latest-experiments-panel?branch=feature%2Fredesign-latest-experiment-cards)
+# Expression Atlas Latest Experiments Panel [![Build Status](https://travis-ci.com/ebi-gene-expression-group/atlas-latest-experiments-panel.svg?branch=master)](https://travis-ci.com/ebi-gene-expression-group/atlas-latest-experiments-panel) [![Coverage Status](https://coveralls.io/repos/github/ebi-gene-expression-group/atlas-latest-experiments-panel/badge.svg?branch=master)](https://coveralls.io/github/ebi-gene-expression-group/atlas-latest-experiments-panel?branch=master)
 
 ## About the component
 This repository contains a React component that renders rows of experiment links with some metadata. It is intended to
