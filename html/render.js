@@ -8,4 +8,4 @@ const renderLatestExperimentContainer = (options, target) => {
 }
 
 
-export { renderSceaHomepageSpeciesContainer, renderSpeciesCard, renderExtendableCard, renderHcaLandingPageContainer, renderLatestExperimentContainer }
+export {renderLatestExperimentContainer}

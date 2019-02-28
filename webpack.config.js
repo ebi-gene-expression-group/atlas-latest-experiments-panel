@@ -45,7 +45,7 @@ module.exports = {
   },
 
   devServer: {
-    port: 9001,
+    port: 9000,
     contentBase: path.resolve(__dirname, `html`),
     publicPath: commonPublicPath
   }

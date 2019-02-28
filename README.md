@@ -1,7 +1,8 @@
-# Single Cell Latest Experiment Cards
+# Expression Atlas Latest Experiments Panel [![Build Status](https://travis-ci.com/ebi-gene-expression-group/atlas-latest-experiments-panel.svg?branch=master)](https://travis-ci.com/ebi-gene-expression-group/atlas-latest-experiments-panel) [![Coverage Status](https://coveralls.io/repos/github/ebi-gene-expression-group/atlas-latest-experiments-panel/badge.svg?branch=feature%2Fredesign-latest-experiment-cards)](https://coveralls.io/github/ebi-gene-expression-group/atlas-latest-experiments-panel?branch=feature%2Fredesign-latest-experiment-cards)
 
 ## About the component
-This repository contains a tab shape React component that renders layers of cards with tooltips and links.
+This repository contains a React component that renders rows of experiment links with some metadata. It is intended to
+be used in the *Latest experiments* tab in both Expression Atlas and Single Cell Expression Atlas home page.
 
 ## Getting started
 ### Installing dependencies
@@ -10,7 +11,7 @@ In order to run the application, you must first install the dependencies using `
 npm install
 ```
 
-### Try it out 
+### Try it out
 Use [webpack-dev-server](https://github.com/webpack/webpack-dev-server) to run the application in your browser:
 ```
 npx webpack-dev-server -d

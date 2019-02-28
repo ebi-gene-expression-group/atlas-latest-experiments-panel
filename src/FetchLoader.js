@@ -33,7 +33,7 @@ const withFetchLoader = (WrappedComponent) => {
       return null
     }
 
-    async componentDidUpdate(prevProps, prevState) {
+    async componentDidUpdate() {
       if (this.state.data === null && this.state.hasError === null) {
         await this._loadAsyncData(URI(this.props.resource, this.props.host).toString())
       }
@@ -85,10 +85,10 @@ const withFetchLoader = (WrappedComponent) => {
       return (
         hasError ?
           <CalloutAlert error={hasError} /> :
-        isLoading ?
-          <p className={`row column loading-message`} > Loading, please wait...</p> :
-        // Promise fulfilled
-          <WrappedComponent cards={data} host={this.props.host} />
+          isLoading ?
+            <p className={`row column loading-message`} > Loading, please wait...</p> :
+            // Promise fulfilled
+            <WrappedComponent cards={data} host={this.props.host} />
       )
     }
   }
