@@ -1,6 +1,6 @@
 import withFetchLoader from './FetchLoader'
-import LatestExperimentPanel from './LatestExperimentPanel'
+import LatestExperimentEntry from './LatestExperimentEntry'
 
-const _SceaHomePageLatestExperimentContainer = withFetchLoader(LatestExperimentPanel)
+const _SceaHomePageLatestExperimentContainer = withFetchLoader(LatestExperimentEntry)
 
 export {_SceaHomePageLatestExperimentContainer as SceaHomePageLatestExperimentContainer}
