@@ -10,7 +10,7 @@ const TableCellDiv = styled.div`
 }
 `
 
-const LatestExperimentEntry = ({numberOfAssays, host, experimentAccession, lastUpdate, experimentDescription, species}) =>
+const LatestExperimentEntry = ({experimentAccession, experimentDescription, numberOfAssays, lastUpdate, species, host}) =>
   <li>
     <div style={{display: `block`, marginBottom: `1rem`}}>
       <TableCellDiv className={`hide-for-small-only`}>
@@ -29,29 +29,13 @@ const LatestExperimentEntry = ({numberOfAssays, host, experimentAccession, lastU
     </div>
   </li>
 
-const SceaHomePageLatestExperimentPanel = ({cards, host}) => <div id={`latest-experiments`} style={{padding: `1rem`}}>
-  <ul style={{listStyle: `none`, marginLeft: `offset`}}>
-    { Array.isArray(cards) && cards.map((card, idx) => <LatestExperimentEntry key={idx} host={host} {...card}/>) }</ul>
-</div>
-
-
-SceaHomePageLatestExperimentPanel.propTypes = {
-  experimentType: PropTypes.string,
+LatestExperimentEntry.propTypes = {
   experimentAccession: PropTypes.string,
   experimentDescription: PropTypes.string,
-  lastUpdate: PropTypes.string,
   numberOfAssays: PropTypes.number,
-  numberOfContrasts: PropTypes.number,
+  lastUpdate: PropTypes.string,
   species: PropTypes.string,
-  kingdom: PropTypes.string,
-  experimentalFactors: PropTypes.arrayOf(PropTypes.string),
-  arrayDesigns: PropTypes.array,
-  arrayDesignNames: PropTypes.array
+  host: PropTypes.string
 }
 
-SceaHomePageLatestExperimentPanel.propTypes = {
-  cards: PropTypes.arrayOf(PropTypes.shape(LatestExperimentEntry.propTypes)).isRequired,
-  host: PropTypes.string.isRequired
-}
-
-export default SceaHomePageLatestExperimentPanel
+export default LatestExperimentEntry
